@@ -1,0 +1,49 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render 'partials/header' %>
+<br>
+<br>
+<div class = "container">
+
+<%= render 'filter' %>
+
+<% if @properties.empty? %>
+<hr>
+<h3>No results found</h3>
+<% else %>
+
+    <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Price</th>
+                      <th>Address</th>
+                      <th>Rooms</th>
+                      <th>MRT</th>  
+                      <th colspan="6"></th> 
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% @properties.each do |property| %>
+                      <tr>
+                         
+                        <td><%= link_to property.title, property %></td>
+                        <td><%= property.price %></td>
+                        <td><%= property.address %></td>
+                        <td><%= property.number_of_rooms %></td>
+                        <td><%= property.MRT %></td>
+                        <td><%= link_to 'Show', property , class: "btn btn-link" %></td>
+                        
+                      </tr>
+                    
+                    <% end %>
+                  </tbody>
+                </table>
+
+<%= will_paginate @properties, renderer: BootstrapPagination::Rails %>
+
+<%= link_to "New property", new_property_path %>
+<% end %>
+
+</div>

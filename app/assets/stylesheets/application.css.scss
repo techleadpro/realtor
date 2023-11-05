@@ -1,0 +1,377 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ *= require_self
+ */
+
+/*@import "adminlte";*/
+@import "home";  
+
+/*can comment out later*/
+
+
+
+.wrapper1 {
+  position: relative;
+  ////Background for main
+  ////background-color: #D3F0E0;
+   background-color: #f3f6f4;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  
+  text-align: center;
+  font-family: arial;
+}
+
+
+  /* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 210px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  ////Background color
+  ///background-color: #EFF8F8; /* Black */
+  background-color: #ffffff; /* Black */
+  
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  ////text color
+////  color: #00A380;
+  color: #000000;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #979797;
+}
+
+/* Style page content */
+.main {
+  margin-left: 210px; /* Same as the width of the sidebar */
+ margin-top: 7px; 
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+
+ .center {
+    text-align: center;
+}
+
+
+
+/* Footer */
+.footer1 {
+    max-width: 100%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+
+.footer1, .footer1 a {
+////     color: #00A380;
+   
+color: #000000;
+    font-size: 0.9rem;
+}
+
+.footer1 p {
+    margin: 1.5rem;
+
+}
+
+
+.footer1 ul {
+   list-style: none;
+
+}
+.footer1 .footer1-cols {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer1 li {
+    line-height: 1.9;
+}
+
+.footer1 li:hover {
+   
+}
+
+
+
+
+
+/* Footer */
+#main-footer1 {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.4rem;
+    max-width: 100%;
+    padding-top: 5rem;
+
+}
+
+
+#main-footer1 a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+
+
+/* 20/9/2023 - added front page for login and signup as well as frontpage */
+#wrapper2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#left1 {
+    flex: 1;
+
+}
+
+
+
+#right1 {
+
+display: flex;
+flex-direction: column;
+flex: 1;
+align-items: center;
+justify-content: center;
+height: 90vh;
+
+}
+
+
+
+#signin {
+   padding-top: 10rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+   
+}
+
+
+
+#signin form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+#signin .logo {
+    margin-bottom: 8vh;
+
+}
+
+#signin .logo img{
+    width: 100px;
+
+}
+
+
+#signin label {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+#signin .text-input{
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 2px;
+    background: #181818;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+}
+
+#signin .primary-btn{
+    width: 100%;
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #3655ab;  /* main color for the buttons on the sign in page */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+#signin .primary-btn:hover{
+    background-color: #72a3f7;
+
+}
+
+#signin .secondary-btn,
+.or,
+.links {
+    width: 60%;
+}
+
+
+#signin .links a {
+    display: block;
+    color: #17989D;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+
+}
+
+#signin .or{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+#signin .or .bar{
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+
+#signin .or span{
+    color: #ccc;
+    padding: 0 0.8rem;
+}
+
+
+
+
+/* Showcase */
+#showcase1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('layout.png ') no-repeat center center / cover;
+    
+    height: 100vh;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+#showcase1 .showcase1-text {
+    font-size: 1.5rem;
+    width: 100%;
+    color: #3655ab;
+    margin-bottom:  1.5rem;
+}
+
+
+#showcase1 .secondary-btn{
+    width: 60%;
+    margin: auto;
+}
+
+
+
+/* Footer */
+#main-footer1 {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 5rem;
+
+}
+
+
+#main-footer1 a {
+    color: #17989D;
+    text-decoration: underline;
+}
+
+/* Button */
+.primary1-btn{
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #f96816;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+.primary1-btn:hover{
+    background-color: #ff7b39;
+
+}
+
+
+
+.secondary1-btn{
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 1px solid #444;
+    border-radius: 2px;
+    font-weight: 500;
+    background: none;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+
+}
+
+.secondary1-btn:hover{
+    border-color: #3655ab;
+    color: #3655ab;
+
+}
+

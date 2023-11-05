@@ -1,0 +1,8 @@
+<%= render 'partials/header' %>
+<% if (!user_signed_in?) %>
+<%= render 'shared/jumbotron'%>
+<% end %>
+
+<!-- Main navigation -->
+<%= render 'shared/main'%> 
+<%= render 'shared/footer'%>

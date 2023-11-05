@@ -1,0 +1,59 @@
+<div class = "filter">
+<%= form_tag properties_path, method: :get, class: "form-inline" do %>
+ 
+<div class="row">
+
+<div class="col-md-2">
+<%= label_tag "Type" %>
+</div>
+<div class="col-md-2">
+<%= label_tag "Price" %>
+</div>
+
+<div class="col-md-2">
+<%= label_tag :address %>
+</div>
+
+<div class="col-md-2">
+<%= label_tag :number_of_rooms %>
+</div>
+
+<div class="col-md-2">
+<%= label_tag :MRT %>
+</div>
+
+</div> 
+
+<div class="row">
+
+<div class="col-md-2">
+<%= text_field_tag :title, params[:title], placeholder: "name", class: "form-control input-sm" %>
+</div>
+
+
+<div class="col-md-2">
+<%= text_field_tag :price, params[:price], placeholder: "price", class: "form-control input-sm" %>
+</div>
+
+<div class="col-md-2">
+<%= text_field_tag :address, params[:address], placeholder: "Please enter location" , class: "form-control input-sm" %>
+</div>
+
+<div class="col-md-2">
+<%= text_field_tag :number_of_rooms, params[:number_of_rooms], placeholder: "# of beds" , class: "form-control input-sm" %>
+</div>
+
+<div class="col-md-2">
+<%= text_field_tag :MRT, params[:MRT], placeholder: "MRT" , class: "form-control input-sm" %>
+</div>
+<div class="col-md-2">
+<%= submit_tag "Search" , name: nil, class: "btn btn-primary"%>
+</div>
+
+</div>
+
+
+<% end %>
+
+
+</div>

@@ -1,0 +1,86 @@
+<div class = "row">
+
+<nav class="navbar fixed-top navbar-expand-lg">
+     <a class="navbar-brand" href="/">
+      <div class = "c-menu-sm">
+           <%= image_tag "logo1.png" %>
+      </div>
+     </a>
+      
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <!-- Navbar brand -->
+    <%= link_to "Home", root_path, class: "nav-link" %>
+    <!-- Toggle button -->
+      </li>
+
+
+      <li class="nav-item d-none d-sm-inline-block">
+         <%= link_to "Property Search", pages_search_path, class: "nav-link" %>
+      </li>
+
+
+      <li class="nav-item d-none d-sm-inline-block">
+         <%= link_to "Favorites", pages_favorites_path, class: "nav-link" %>
+      </li>
+
+      <li class="nav-item d-none d-sm-inline-block">
+         <%= link_to "About Us", pages_about_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+         <%= link_to "Contact Us", pages_contact_path, class: "nav-link" %>
+      </li>
+ 
+
+    </ul>
+
+  
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto justify-content-end">
+    
+      
+  
+     
+              <% if (!user_signed_in?) %>
+
+              <div class="d-flex align-items-center">
+                <%= link_to "Login", new_user_session_path, class:"nav-link px-3 me-2" %>
+                <%= link_to "Sign up", new_user_registration_path, class:"btn btn-outline-primary me-3" %>
+              </div>
+
+              <% else %>
+              
+
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <%= image_tag "default-image.gif", class: "img-circle img-sm" %>
+                        <span class="caret"></span>
+                
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   
+                  <%= link_to "Creat Property", properties_path, class: "dropdown-item" %>
+                  
+                  <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item"%>
+
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Account Settings</a>
+                  
+                </div>
+              </li>
+              
+              <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, class: "nav-link", method: :delete %></li>
+
+             <% end %>
+    </ul>
+  </nav>
+
+</div>

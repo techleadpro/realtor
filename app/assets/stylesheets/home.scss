@@ -1,0 +1,384 @@
+@import "./variables";
+
+
+.c-menu-sm img{
+   height: 50px;  
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  position: relative;
+}
+/* ======= NAVBAR ======= */
+.navbar {
+//  background-color: #EFF8F8 !important;
+  background-color: #FFFFFF !important;
+  .navbar-brand {
+  color: #00A380 !important ;
+  font-size: 26px;
+  font-weight: 700;
+
+  }
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+
+
+
+.nav-link {
+  color: #000000 !important;
+  font-size: 16px;
+  font-weight: 600;
+  &.signup-btn {
+    background-color: transparent;
+    border-color: $greenColor;
+  }
+  &.state-btn {
+    border-color: $greenColor;
+    color: $greenColor !important;
+  }
+  &.state-btn:hover, &.state-btn.online {
+    background-color: $greenColor;
+    border-color: $greenColor;
+    color: white !important;
+  }
+}
+
+
+
+/** =================== HEADER STYLES ================== **/
+
+.jumbotron {
+  background-image:  image-url('layout.png');
+    height: 400px;
+    margin: 0px;
+
+    background-position: center;
+  //linear-gradient(to right, #f3f6f4, #EFF8F8);
+  // clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  //height: 90vh;
+
+  h1 {
+    font-size: 48px;
+    line-height: 70px;
+    font-weight: 800;
+    width: 100%;
+    color: #3655ab;
+    //text-shadow: 0px 2px 3px #555;
+  }
+
+  p {
+ //  color: #00A380;
+//    color: #fff;
+    width: 100%;
+  }
+  .update {
+    margin-bottom: 25px;
+
+    p {
+////      background-color: #00A380;
+////      color: white;
+      color: white;
+      text-shadow: 0px 2px 3px #555;
+      border-radius: 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+      span {
+        font-size: 12px;
+        background-color: $greenColor;
+        border-radius: 20px;
+        margin-bottom: 0px;
+      }
+    }
+    
+  }
+
+
+  .start-btn {
+    background-color: $greenColor;
+    border-color: $greenColor;
+    &:focus, &:active {
+      box-shadow: none;
+      background-color: $greenColor;
+      border-color: $greenColor;
+    }
+  }
+}
+ 
+.header-image {
+  position: absolute;
+  top: 80px;
+  right: 230px;
+  width: 200px;
+  
+}
+
+.filter {
+
+  background-color: rgba(215,226,241,0.9);
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/** =======================DEVELOPERS SECTION ======================== **/
+
+.developers {
+  padding: 20px;
+  h2 {
+    font-weight: 300;
+    color: #212CA6;
+  }
+  .dev-card {
+    background-color: #BCDEFA;
+    border-radius: 20px;
+    img {
+      border: 3px solid #EFF8FF;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+    .dev-name {
+        padding: 0px 10px;
+        .appearance {
+            color: red;
+            font-size: 8px;
+            &.online {
+                color: green;
+            }
+            
+        }
+    }
+    .dev-icons {
+      i {
+        font-size: 18px;   
+      }
+      .github-icon {
+        color: black;
+      }
+      .camera-icon {
+        color: $greenColor;
+        &.offline {
+            display: none;
+        }
+        
+        
+      }
+    }
+  }
+}
+
+////////// ================== AUTH FORM ============//////////////
+
+.auth-page {
+  ////  background-image: linear-gradient(to right, #D1EFEF, #EFF8F8);
+  background-image: linear-gradient(to right, #f3f6f4, #EFF8F8);
+    height: 100vh;
+}
+
+.form-block {
+  margin-top: 80px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: white;
+  h1 {
+    text-align: center;
+    font-weight: 700;
+  }
+  .form-body {
+  
+    //========Avatar upload styles=========//
+    .avatar-wrapper{
+      position: relative;
+      height: 100px;
+      width: 100px;
+      margin: 50px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 1px 1px 15px -5px black;
+      transition: all .3s ease;
+      &:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      &:hover .profile-pic{
+        opacity: .5;
+      }
+      .profile-pic {
+            height: 100%;
+          width: 100%;
+          transition: all .3s ease;
+            &:after{
+              //font-family: FontAwesome;
+              content: "Upload Avatar";
+              top: 0px; left: 0;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              font-size: 20px;
+              background: #ecf0f1;
+              color: #34495e;
+              text-align: center;
+              padding-top: 15px;
+            }
+      }
+      .upload-button {
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%;
+        width: 100%;
+        .fa-arrow-circle-up{
+          position: absolute;
+          font-size: 100px;
+          top: 0px;
+          left: 0px;
+          text-align: center;
+          opacity: 0;
+          transition: all .3s ease;
+          color: #34495e;
+        }
+        &:hover .fa-arrow-circle-up{
+          opacity: .9;
+        }
+      }
+    }
+    //========Avatar upload styles=========//
+    
+    
+    label, em {
+      color: $grayColor;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    input {
+      box-shadow: none;
+      background-color: $lightGray;
+      &:focus {
+        background-color: white;
+        border: 2px solid $lightGray;
+      }
+    }
+    input.btn {
+      @include btn;
+    }
+    
+    a {
+      color: $grayColor;
+      font-size: 14px;
+    }
+    .alert-error {
+      background-color: red;
+      color: white;
+      .close {
+        color: white;
+        margin-left: 3px;
+      }
+    }
+
+  }
+}//========================== Auth form =====================
+
+
+
+// ========= Bootstrap notification ==========
+.notice, .danger {
+  margin: 0px;
+  p {
+    margin-bottom: 0px;
+  }
+}// ========= Bootstrap notification ==========
+
+
+
+//===================== Modal =============================
+.modal {
+  .modal-header {
+    //background-color: white;
+    .fas {
+      margin: 4px 0px 0px 10px;
+      color: green;
+    }
+    .fas.fa-video-slash {
+      color: red;
+    }
+
+    .modal-title {
+      color: white;
+    }
+
+  }
+  .modal-body {
+    .fas {
+      font-size: 18px;
+      margin-left: 10px;
+      color: green;
+    }
+    #session_id, #sender_id {
+      display: none;
+    }
+  }
+  .modal-footer {
+    //background-color: #121212;
+    //color: white;
+  }
+
+}
+
+#modal-body-session {
+  padding: 0px;
+  height: 400px;
+  .session {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    #subscriber {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    #publisher {
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      bottom: 0px;
+      right: 0px;
+      z-index: 1000;
+
+    }
+  }
+}//==================== Modal ============================
+
+
+/*================================= MEDIA QUERIES ==============================*/
+
+@media (max-width: 800px) {
+
+  .navbar-nav .state-btn {
+     margin: 5px 0px;
+  }
+
+  .jumbotron {
+    text-align: center;
+    h1 {
+      font-size: 28px;
+      width: 100%;
+    }
+    p {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+  
+
+}
+
+
+
+

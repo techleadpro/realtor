@@ -1,0 +1,13 @@
+$grayColor: #4D4D4D;
+//$lightGray: #E8EBED;
+//$greenColor: #3DC794;
+$lightGray: #E8EBED;
+$greenColor: #000000;
+
+@mixin btn {
+background-color: $greenColor;
+color: white;
+border-color: $greenColor;
+border-radius: 10px;
+font-weight: 500;
+}

@@ -1,0 +1,31 @@
+<div class = "filter">
+<%= form_tag properties_path, method: :get, class: "form-inline" do %>
+ 
+<div class="row">
+<div class="col-md-4">
+<%= label_tag "Price" %>
+</div>
+<div class="col-md-2">
+<%= label_tag :bedrooms %>
+</div>
+
+</div> 
+
+<div class="row">
+<div class="col-md-4">
+<%= text_field_tag :price, params[:price], placeholder: "price", class: "form-control input-sm" %>
+</div>
+<div class="col-md-2">
+<%= text_field_tag :bedrooms, params[:bedrooms], placeholder: "# of beds" , class: "form-control input-sm" %>
+</div>
+<div class="col-md-2">
+<%= submit_tag "Search" , name: nil, class: "btn btn-primary"%>
+</div>
+
+</div>
+
+
+<% end %>
+
+
+</div>

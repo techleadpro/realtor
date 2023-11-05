@@ -1,0 +1,96 @@
+
+<!-- Page content -->
+<div class="main">
+<%= render 'partials/header' %>
+
+<div class="wrapper1" style="min-height: 690px;">
+
+<br>
+<br>
+<br>
+<br>
+		<section class="content">
+
+
+      <div class="container-fluid">
+
+       
+      
+
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Default box -->
+            <div class="card">
+              <div class="card-header">
+                <%= render 'partials/filter'%>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fas fa-minus"></i></button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                    <i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="card-body">
+               
+             <p id="notice"><%= notice %></p>                             
+
+				<br>
+
+				    <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Name of property</th>
+                      <th>Price per month</th>
+                      <th>Address</th>
+                      <th>Number of Rooms</th>
+                      <th>MRT</th>  
+                      <th colspan="6"></th>	
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% @properties.each do |property| %>
+                      <tr>
+                      	 
+                        <td><%= link_to property.title, property %></td>
+                        <td><%= property.price %></td>
+                        <td><%= property.address %></td>
+                        <td><%= property.number_of_rooms %></td>
+                        <td><%= property.MRT %></td>
+                        <td><%= link_to 'Show', property , class: "btn btn-link" %></td>
+                        
+                      </tr>
+                    
+                    <% end %>
+                  </tbody>
+                </table>
+
+                <br>
+				
+
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <div class="p-2 text-xs">
+                  <div class="pull-right text-muted py-1">
+                    © Copyright <strong>Urhouse.com.</strong> <span class="hidden-xs-down">- Built with care!!</span>
+                    <a ui-scroll-to="content"><i class="fa fa-long-arrow-up p-x-sm"></i></a>
+                  </div>
+          
+                </div>
+              </div>
+              <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+</div> 
+
+
+
+</div>
+
